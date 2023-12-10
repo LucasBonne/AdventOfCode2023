@@ -15,13 +15,13 @@ for line in lines:
     list_number = [eval(i) for i in re.findall(r'\d+', line)]
     warning_list = re.findall(r'\d\d+ [A-Za-z_]+', line)
     for warning in warning_list:
-        if int(re.findall(r'\d+', warning)[0])>12 and re.findall(r'red', warning):
+        if int(re.findall(r'\d+', warning)[0]) > 12 and re.findall(r'red', warning):
             print('red :',line)
             error = 1
-        elif int(re.findall(r'\d+', warning)[0])>13 and re.findall(r'green', warning):
+        elif int(re.findall(r'\d+', warning)[0]) > 13 and re.findall(r'green', warning):
             print('green', line)
             error = 1
-        elif int(re.findall(r'\d+', warning)[0])>14 and re.findall(r'blue', warning):
+        elif int(re.findall(r'\d+', warning)[0]) > 14 and re.findall(r'blue', warning):
             print('blue', line)
             error = 1
     if error == 0 :
